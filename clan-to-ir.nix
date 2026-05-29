@@ -186,6 +186,146 @@ let
 
   isNixpkgs = input: builtins.match "nixpkgs.*" input != null;
 
+  # --- File identity parsing ---
+  # .graph file strings can contain "via option" suffixes:
+  #   "/nix/store/..../module.nix, via option outputs.moduleForMachine.eve"
+  #   "/nix/store/..../flake.nix#nixosModules.clanCore"
+  # Parse these into structured identity.
+
+  # --- File identity parsing ---
+  # .graph file strings encode provenance through multiple patterns:
+  #
+  #   Simple file:
+  #     "/nix/store/.../nixosModules/acme.nix"
+  #
+  #   Single via option:
+  #     "/nix/store/.../module.nix, via option outputs.moduleForMachine.eve"
+  #
+  #   Chained via options (clan service instantiation):
+  #     "/nix/store/.../clanServices/tor/default.nix, via option
+  #      _services.allServices."<clan-core>-tor".roles.server.perInstance,
+  #      via option nixosModule"
+  #
+  #   Flake fragment:
+  #     "/nix/store/.../flake.nix#nixosModules.clanCore"
+  #
+  # Parse these into structured identity with:
+  #   - aspectName: clean module name for display
+  #   - loc: the full via-option chain (how it was included)
+  #   - identity: dedup key (input:relPath, ignoring via-option suffix)
+
+  # Split a file string into base path + list of via-option segments
+  splitViaOptions =
+    file:
+    let
+      parts = builtins.split ", via option " file;
+      # builtins.split returns interleaved [str, match, str, match, str]
+      # Filter to just the string parts
+      strings = filter builtins.isString parts;
+    in
+    {
+      basePath = builtins.head strings;
+      viaOptions = builtins.tail strings;
+    };
+
+  stripNix = s:
+    let m = builtins.match "(.+)\\.nix" s;
+    in if m != null then builtins.elemAt m 0 else s;
+
+  stripPrefixes = s:
+    let
+      prefixes = [ "nixosModules/" "clanServices/" "modules/" ];
+      go = remaining: ps:
+        if ps == [ ] then remaining
+        else
+          let p = builtins.head ps;
+          in if builtins.substring 0 (builtins.stringLength p) remaining == p
+             then builtins.substring (builtins.stringLength p) 9999 remaining
+             else go remaining (builtins.tail ps);
+    in go s prefixes;
+
+  # Extract a service identity from a via-option chain like:
+  #   _services.allServices."<clan-core>-tor".roles.server.perInstance
+  # → { service = "tor"; role = "server"; }
+  parseServiceVia =
+    via:
+    let
+      # Match: _services.allServices."<input>-name".roles.<role>.perInstance
+      m1 = builtins.match ''.*allServices\."?<?([^">]+)>?-([^"]+)"?\.roles\.([^.]+)\.perInstance.*'' via;
+      # Match: _services.allServices.<name>.roles.<role>.perInstance (no quotes)
+      m2 = builtins.match ".*allServices\\.([^.]+)\\.roles\\.([^.]+)\\.perInstance.*" via;
+    in
+    if m1 != null then {
+      service = builtins.elemAt m1 1;
+      role = builtins.elemAt m1 2;
+      source = builtins.elemAt m1 0;
+    }
+    else if m2 != null then {
+      service = builtins.elemAt m2 0;
+      role = builtins.elemAt m2 1;
+      source = null;
+    }
+    else null;
+
+  parseFileIdentity =
+    file:
+    let
+      split = splitViaOptions file;
+      basePath = split.basePath;
+      viaOptions = split.viaOptions;
+
+      # Split off "#fragment" (flake.nix#nixosModules.clanCore)
+      fragMatch = builtins.match "(.+)#(.+)" basePath;
+      hasFragment = fragMatch != null;
+      filePath = if hasFragment then builtins.elemAt fragMatch 0 else basePath;
+      fragment = if hasFragment then builtins.elemAt fragMatch 1 else null;
+
+      # Resolve store path to input:relative
+      r = resolveFile filePath;
+      cleanRel = stripPrefixes (stripNix r.rel);
+
+      # Try to extract service identity from via-option chain
+      serviceInfo =
+        let
+          parsed = map parseServiceVia viaOptions;
+          found = filter (x: x != null) parsed;
+        in
+        if found != [ ] then builtins.head found else null;
+
+      # Build the display name
+      # Clan service modules: use "service/role" identity
+      # Self modules: just the clean relative path
+      # External: input/cleanPath
+      aspectName =
+        if serviceInfo != null then "${serviceInfo.service}/${serviceInfo.role}"
+        else if r.input == "self" then cleanRel
+        else if cleanRel == "" && fragment != null then fragment
+        else if cleanRel == "" then r.input
+        else "${r.input}/${cleanRel}";
+
+      # The full via-option chain is the loc
+      loc =
+        if viaOptions != [ ] then concatStringsSep " → " viaOptions
+        else if fragment != null then fragment
+        else null;
+
+      displayLabel =
+        if serviceInfo != null then "${serviceInfo.service}/${serviceInfo.role}"
+        else aspectName;
+    in
+    {
+      inherit (r) input;
+      rel = r.rel;
+      inherit viaOptions fragment loc aspectName serviceInfo;
+      label = displayLabel;
+      fullLabel =
+        if loc != null then "${displayLabel} (via ${loc})"
+        else displayLabel;
+      # Identity key for dedup — same base file on same host = same node
+      # Via-option variants of the same file collapse into one node
+      identity = "${r.input}:${if cleanRel != "" then cleanRel else r.rel}";
+    };
+
   # Walk a .graph tree, collecting non-nixpkgs module nodes.
   # When a nixpkgs node is encountered, skip it but recurse into ALL
   # children (not just non-nixpkgs ones) — non-nixpkgs modules may be
@@ -193,25 +333,20 @@ let
   collectModules =
     depth: node:
     let
-      r = resolveFile node.file;
-      skip = isNixpkgs r.input;
-      label = if r.rel != "" then "${r.input}:${r.rel}" else r.input;
+      parsed = parseFileIdentity node.file;
+      skip = isNixpkgs parsed.input;
       children = node.imports or [ ];
       nonNixpkgsChildren = filter (c: !(isNixpkgs (resolveFile c.file).input)) children;
       nixpkgsCount = length children - length nonNixpkgsChildren;
     in
     if skip then
-      # Skip this node, recurse ALL children to find non-nixpkgs descendants
       concatMap (collectModules depth) children
     else
       [
         {
-          inherit label depth;
-          input = r.input;
-          rel = r.rel;
+          inherit (parsed) input label fullLabel aspectName identity loc;
+          inherit depth;
           nixpkgsChildren = nixpkgsCount;
-          # For non-nixpkgs nodes, only recurse non-nixpkgs children
-          # (nixpkgs children under a user module are uninteresting)
           children = concatMap (collectModules (depth + 1)) nonNixpkgsChildren;
         }
       ];
@@ -225,50 +360,71 @@ let
     concatMap (collectModules 0) graph
   ) nixosConfigurations;
 
-  # Flatten a module tree into nodes + edges for a host
+  # Flatten a module tree into nodes + edges for a host, with dedup
   flattenModuleTree =
     hostName: modules:
     let
       ms = machineScopeMap.${hostName} or null;
       parentNodeId = if ms != null then ms.nodeId else "unknown_${sanitize hostName}";
+      hostScopeId = if ms != null then ms.scopeId else "";
 
       go =
-        parentId: depth: mods:
-        concatMap (
-          m:
+        parentId: mods: seen:
+        builtins.foldl' (
+          acc: m:
           let
-            nodeId = mkNodeId parentNodeId (sanitize m.label);
-            childResults = go nodeId (depth + 1) m.children;
+            nodeId = mkNodeId parentNodeId (sanitize m.identity);
+            isDuplicate = acc.seen ? ${m.identity};
+            childResult = go nodeId m.children (acc.seen // { ${m.identity} = true; });
           in
-          [
+          if isDuplicate then
+            # Node already emitted — still emit the edge (different parent)
+            # but skip creating a duplicate node
             {
-              node = mkNode {
-                id = nodeId;
-                label = m.label;
-                fullLabel = m.label;
-                shape = if m.input == "self" then "hexagon" else "trapezoid";
-                style = if m.input == "self" then "default" else "adapter";
-                entityKind = "host";
-                entityInstance = "host:${hostName}";
-                scope = machineScopeMap.${hostName}.scopeId;
-                originalId = m.label;
-                pathKey = m.label;
-                host = hostName;
-                class = "nixos";
-                classes = [ "nixos" ];
-                hasClass = true;
-              };
-              edge = mkEdge {
-                from = parentId;
-                to = nodeId;
-                host = hostName;
-              };
+              seen = childResult.seen;
+              results = acc.results ++ [
+                {
+                  node = null; # skip
+                  edge = mkEdge {
+                    from = parentId;
+                    to = nodeId;
+                    host = hostName;
+                  };
+                }
+              ] ++ childResult.results;
             }
-          ]
-          ++ childResults
-        ) mods;
+          else
+            {
+              seen = childResult.seen // { ${m.identity} = true; };
+              results = acc.results ++ [
+                {
+                  node = mkNode {
+                    id = nodeId;
+                    label = m.label;
+                    fullLabel = m.fullLabel;
+                    shape = if m.input == "self" then "hexagon" else "trapezoid";
+                    style = if m.input == "self" then "default" else "adapter";
+                    entityKind = "host";
+                    entityInstance = "host:${hostName}";
+                    scope = hostScopeId;
+                    originalId = m.identity;
+                    pathKey = m.aspectName;
+                    host = hostName;
+                    class = "nixos";
+                    classes = [ "nixos" ];
+                    hasClass = true;
+                  };
+                  edge = mkEdge {
+                    from = parentId;
+                    to = nodeId;
+                    host = hostName;
+                  };
+                }
+              ] ++ childResult.results;
+            }
+        ) { inherit seen; results = []; } mods;
     in
-    go parentNodeId 0 modules;
+    (go parentNodeId modules { }).results;
 
   allModuleResults = lib.concatLists (
     mapAttrsToList (
@@ -277,7 +433,7 @@ let
     ) hostModuleGraphs
   );
 
-  moduleNodes = map (r: r.node) allModuleResults;
+  moduleNodes = filter (n: n != null) (map (r: r.node) allModuleResults);
   moduleEdges = map (r: r.edge) allModuleResults;
 
   # --- Assemble IR ---
