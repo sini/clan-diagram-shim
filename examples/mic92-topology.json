@@ -3525,7 +3525,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_bernie",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: bernie",
             "name": "bernie",
             "parent": "scope_fleet_mic92",
@@ -3533,7 +3533,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_blob64",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: blob64",
             "name": "blob64",
             "parent": "scope_fleet_mic92",
@@ -3541,7 +3541,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_dorits_laptop",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: dorits-laptop",
             "name": "dorits-laptop",
             "parent": "scope_fleet_mic92",
@@ -3549,7 +3549,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_eva",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: eva",
             "name": "eva",
             "parent": "scope_fleet_mic92",
@@ -3557,7 +3557,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_eve",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: eve",
             "name": "eve",
             "parent": "scope_fleet_mic92",
@@ -3565,7 +3565,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_evo",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: evo",
             "name": "evo",
             "parent": "scope_fleet_mic92",
@@ -3573,7 +3573,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_installer",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: installer",
             "name": "installer",
             "parent": "scope_fleet_mic92",
@@ -3581,7 +3581,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_jacquardmachine",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: jacquardmachine",
             "name": "jacquardmachine",
             "parent": "scope_fleet_mic92",
@@ -3589,7 +3589,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_matchbox",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: matchbox",
             "name": "matchbox",
             "parent": "scope_fleet_mic92",
@@ -3597,7 +3597,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_turingmachine",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: turingmachine",
             "name": "turingmachine",
             "parent": "scope_fleet_mic92",
@@ -3605,7 +3605,7 @@
         },
         {
             "id": "scope_fleet_mic92_machine_utm_vm",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: utm-vm",
             "name": "utm-vm",
             "parent": "scope_fleet_mic92",
@@ -3644,8 +3644,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: bernie",
@@ -3672,8 +3672,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: blob64",
@@ -3700,8 +3700,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: dorits-laptop",
@@ -3728,8 +3728,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: eva",
@@ -3756,8 +3756,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: eve",
@@ -3784,8 +3784,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:evo",
-            "entityKind": "machine",
+            "entityInstance": "host:evo",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: evo",
@@ -3812,8 +3812,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:installer",
-            "entityKind": "machine",
+            "entityInstance": "host:installer",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: installer",
@@ -3840,8 +3840,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: jacquardmachine",
@@ -3868,8 +3868,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: matchbox",
@@ -3896,8 +3896,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: turingmachine",
@@ -3924,8 +3924,8 @@
         {
             "class": "",
             "classes": [],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "machine: utm-vm",
@@ -3954,8 +3954,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -3975,7 +3975,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:bernie",
+            "scope": "fleet=mic92,machine=bernie",
             "shape": "hexagon",
             "to": null
         },
@@ -3984,8 +3984,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -4005,7 +4005,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:bernie",
+            "scope": "fleet=mic92,machine=bernie",
             "shape": "hexagon",
             "to": null
         },
@@ -4014,8 +4014,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -4035,7 +4035,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:bernie",
+            "scope": "fleet=mic92,machine=bernie",
             "shape": "hexagon",
             "to": null
         },
@@ -4044,8 +4044,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -4065,7 +4065,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:bernie",
+            "scope": "fleet=mic92,machine=bernie",
             "shape": "hexagon",
             "to": null
         },
@@ -4074,8 +4074,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -4095,7 +4095,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:bernie",
+            "scope": "fleet=mic92,machine=bernie",
             "shape": "hexagon",
             "to": null
         },
@@ -4104,8 +4104,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -4125,7 +4125,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:bernie",
+            "scope": "fleet=mic92,machine=bernie",
             "shape": "hexagon",
             "to": null
         },
@@ -4134,8 +4134,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:bernie",
-            "entityKind": "machine",
+            "entityInstance": "host:bernie",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -4155,7 +4155,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:bernie",
+            "scope": "fleet=mic92,machine=bernie",
             "shape": "hexagon",
             "to": null
         },
@@ -4164,8 +4164,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -4185,7 +4185,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:blob64",
+            "scope": "fleet=mic92,machine=blob64",
             "shape": "hexagon",
             "to": null
         },
@@ -4194,8 +4194,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -4215,7 +4215,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:blob64",
+            "scope": "fleet=mic92,machine=blob64",
             "shape": "hexagon",
             "to": null
         },
@@ -4224,8 +4224,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -4245,7 +4245,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:blob64",
+            "scope": "fleet=mic92,machine=blob64",
             "shape": "hexagon",
             "to": null
         },
@@ -4254,8 +4254,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -4275,7 +4275,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:blob64",
+            "scope": "fleet=mic92,machine=blob64",
             "shape": "hexagon",
             "to": null
         },
@@ -4284,8 +4284,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -4305,7 +4305,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:blob64",
+            "scope": "fleet=mic92,machine=blob64",
             "shape": "hexagon",
             "to": null
         },
@@ -4314,8 +4314,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -4335,7 +4335,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:blob64",
+            "scope": "fleet=mic92,machine=blob64",
             "shape": "hexagon",
             "to": null
         },
@@ -4344,8 +4344,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:blob64",
-            "entityKind": "machine",
+            "entityInstance": "host:blob64",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -4365,7 +4365,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:blob64",
+            "scope": "fleet=mic92,machine=blob64",
             "shape": "hexagon",
             "to": null
         },
@@ -4374,8 +4374,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -4395,7 +4395,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:dorits-laptop",
+            "scope": "fleet=mic92,machine=dorits-laptop",
             "shape": "hexagon",
             "to": null
         },
@@ -4404,8 +4404,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -4425,7 +4425,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:dorits-laptop",
+            "scope": "fleet=mic92,machine=dorits-laptop",
             "shape": "hexagon",
             "to": null
         },
@@ -4434,8 +4434,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -4455,7 +4455,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:dorits-laptop",
+            "scope": "fleet=mic92,machine=dorits-laptop",
             "shape": "hexagon",
             "to": null
         },
@@ -4464,8 +4464,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -4485,7 +4485,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:dorits-laptop",
+            "scope": "fleet=mic92,machine=dorits-laptop",
             "shape": "hexagon",
             "to": null
         },
@@ -4494,8 +4494,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -4515,7 +4515,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:dorits-laptop",
+            "scope": "fleet=mic92,machine=dorits-laptop",
             "shape": "hexagon",
             "to": null
         },
@@ -4524,8 +4524,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -4545,7 +4545,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:dorits-laptop",
+            "scope": "fleet=mic92,machine=dorits-laptop",
             "shape": "hexagon",
             "to": null
         },
@@ -4554,8 +4554,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:dorits-laptop",
-            "entityKind": "machine",
+            "entityInstance": "host:dorits-laptop",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -4575,7 +4575,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:dorits-laptop",
+            "scope": "fleet=mic92,machine=dorits-laptop",
             "shape": "hexagon",
             "to": null
         },
@@ -4584,8 +4584,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -4605,7 +4605,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4614,8 +4614,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -4635,7 +4635,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4644,8 +4644,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: internet",
@@ -4665,7 +4665,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4674,8 +4674,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -4695,7 +4695,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4704,8 +4704,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -4725,7 +4725,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4734,8 +4734,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -4755,7 +4755,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4764,8 +4764,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -4785,7 +4785,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4794,8 +4794,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eva",
-            "entityKind": "machine",
+            "entityInstance": "host:eva",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -4815,7 +4815,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eva",
+            "scope": "fleet=mic92,machine=eva",
             "shape": "hexagon",
             "to": null
         },
@@ -4824,8 +4824,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -4845,7 +4845,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -4854,8 +4854,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -4875,7 +4875,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -4884,8 +4884,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: internet",
@@ -4905,7 +4905,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -4914,8 +4914,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -4935,7 +4935,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -4944,8 +4944,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -4965,7 +4965,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -4974,8 +4974,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -4995,7 +4995,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -5004,8 +5004,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -5025,7 +5025,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -5034,8 +5034,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:eve",
-            "entityKind": "machine",
+            "entityInstance": "host:eve",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -5055,7 +5055,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:eve",
+            "scope": "fleet=mic92,machine=eve",
             "shape": "hexagon",
             "to": null
         },
@@ -5064,8 +5064,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:evo",
-            "entityKind": "machine",
+            "entityInstance": "host:evo",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -5085,7 +5085,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:evo",
+            "scope": "fleet=mic92,machine=evo",
             "shape": "hexagon",
             "to": null
         },
@@ -5094,8 +5094,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:installer",
-            "entityKind": "machine",
+            "entityInstance": "host:installer",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -5115,7 +5115,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:installer",
+            "scope": "fleet=mic92,machine=installer",
             "shape": "hexagon",
             "to": null
         },
@@ -5124,8 +5124,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:installer",
-            "entityKind": "machine",
+            "entityInstance": "host:installer",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -5145,7 +5145,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:installer",
+            "scope": "fleet=mic92,machine=installer",
             "shape": "hexagon",
             "to": null
         },
@@ -5154,8 +5154,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:installer",
-            "entityKind": "machine",
+            "entityInstance": "host:installer",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -5175,7 +5175,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:installer",
+            "scope": "fleet=mic92,machine=installer",
             "shape": "hexagon",
             "to": null
         },
@@ -5184,8 +5184,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:installer",
-            "entityKind": "machine",
+            "entityInstance": "host:installer",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -5205,7 +5205,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:installer",
+            "scope": "fleet=mic92,machine=installer",
             "shape": "hexagon",
             "to": null
         },
@@ -5214,8 +5214,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:installer",
-            "entityKind": "machine",
+            "entityInstance": "host:installer",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -5235,7 +5235,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:installer",
+            "scope": "fleet=mic92,machine=installer",
             "shape": "hexagon",
             "to": null
         },
@@ -5244,8 +5244,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:installer",
-            "entityKind": "machine",
+            "entityInstance": "host:installer",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -5265,7 +5265,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:installer",
+            "scope": "fleet=mic92,machine=installer",
             "shape": "hexagon",
             "to": null
         },
@@ -5274,8 +5274,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -5295,7 +5295,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:jacquardmachine",
+            "scope": "fleet=mic92,machine=jacquardmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5304,8 +5304,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -5325,7 +5325,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:jacquardmachine",
+            "scope": "fleet=mic92,machine=jacquardmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5334,8 +5334,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -5355,7 +5355,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:jacquardmachine",
+            "scope": "fleet=mic92,machine=jacquardmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5364,8 +5364,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -5385,7 +5385,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:jacquardmachine",
+            "scope": "fleet=mic92,machine=jacquardmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5394,8 +5394,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -5415,7 +5415,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:jacquardmachine",
+            "scope": "fleet=mic92,machine=jacquardmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5424,8 +5424,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -5445,7 +5445,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:jacquardmachine",
+            "scope": "fleet=mic92,machine=jacquardmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5454,8 +5454,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:jacquardmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:jacquardmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -5475,7 +5475,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:jacquardmachine",
+            "scope": "fleet=mic92,machine=jacquardmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5484,8 +5484,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -5505,7 +5505,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:matchbox",
+            "scope": "fleet=mic92,machine=matchbox",
             "shape": "hexagon",
             "to": null
         },
@@ -5514,8 +5514,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -5535,7 +5535,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:matchbox",
+            "scope": "fleet=mic92,machine=matchbox",
             "shape": "hexagon",
             "to": null
         },
@@ -5544,8 +5544,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -5565,7 +5565,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:matchbox",
+            "scope": "fleet=mic92,machine=matchbox",
             "shape": "hexagon",
             "to": null
         },
@@ -5574,8 +5574,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -5595,7 +5595,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:matchbox",
+            "scope": "fleet=mic92,machine=matchbox",
             "shape": "hexagon",
             "to": null
         },
@@ -5604,8 +5604,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -5625,7 +5625,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:matchbox",
+            "scope": "fleet=mic92,machine=matchbox",
             "shape": "hexagon",
             "to": null
         },
@@ -5634,8 +5634,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -5655,7 +5655,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:matchbox",
+            "scope": "fleet=mic92,machine=matchbox",
             "shape": "hexagon",
             "to": null
         },
@@ -5664,8 +5664,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:matchbox",
-            "entityKind": "machine",
+            "entityInstance": "host:matchbox",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -5685,7 +5685,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:matchbox",
+            "scope": "fleet=mic92,machine=matchbox",
             "shape": "hexagon",
             "to": null
         },
@@ -5694,8 +5694,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -5715,7 +5715,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5724,8 +5724,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -5745,7 +5745,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5754,8 +5754,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: localbackup-turingmachine",
@@ -5775,7 +5775,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5784,8 +5784,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -5805,7 +5805,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5814,8 +5814,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -5835,7 +5835,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5844,8 +5844,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -5865,7 +5865,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5874,8 +5874,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -5895,7 +5895,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5904,8 +5904,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:turingmachine",
-            "entityKind": "machine",
+            "entityInstance": "host:turingmachine",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -5925,7 +5925,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:turingmachine",
+            "scope": "fleet=mic92,machine=turingmachine",
             "shape": "hexagon",
             "to": null
         },
@@ -5934,8 +5934,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: borgbackup-blob64",
@@ -5955,7 +5955,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:utm-vm",
+            "scope": "fleet=mic92,machine=utm-vm",
             "shape": "hexagon",
             "to": null
         },
@@ -5964,8 +5964,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: emergency-access",
@@ -5985,7 +5985,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:utm-vm",
+            "scope": "fleet=mic92,machine=utm-vm",
             "shape": "hexagon",
             "to": null
         },
@@ -5994,8 +5994,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: sshd-mic92",
@@ -6015,7 +6015,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:utm-vm",
+            "scope": "fleet=mic92,machine=utm-vm",
             "shape": "hexagon",
             "to": null
         },
@@ -6024,8 +6024,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: tor",
@@ -6045,7 +6045,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:utm-vm",
+            "scope": "fleet=mic92,machine=utm-vm",
             "shape": "hexagon",
             "to": null
         },
@@ -6054,8 +6054,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: users-root",
@@ -6075,7 +6075,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:utm-vm",
+            "scope": "fleet=mic92,machine=utm-vm",
             "shape": "hexagon",
             "to": null
         },
@@ -6084,8 +6084,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: wireguard",
@@ -6105,7 +6105,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:utm-vm",
+            "scope": "fleet=mic92,machine=utm-vm",
             "shape": "hexagon",
             "to": null
         },
@@ -6114,8 +6114,8 @@
             "classes": [
                 "nixos"
             ],
-            "entityInstance": "machine:utm-vm",
-            "entityKind": "machine",
+            "entityInstance": "host:utm-vm",
+            "entityKind": "host",
             "fnArgNames": [],
             "from": null,
             "fullLabel": "service: zerotier-mic92",
@@ -6135,7 +6135,7 @@
             },
             "policyName": null,
             "providerPath": [],
-            "scope": "machine:utm-vm",
+            "scope": "fleet=mic92,machine=utm-vm",
             "shape": "hexagon",
             "to": null
         },
@@ -10489,7 +10489,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=bernie",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: bernie",
             "name": "bernie",
             "parent": "fleet=mic92"
@@ -10501,7 +10501,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=blob64",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: blob64",
             "name": "blob64",
             "parent": "fleet=mic92"
@@ -10513,7 +10513,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=dorits-laptop",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: dorits-laptop",
             "name": "dorits-laptop",
             "parent": "fleet=mic92"
@@ -10525,7 +10525,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=eva",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: eva",
             "name": "eva",
             "parent": "fleet=mic92"
@@ -10537,7 +10537,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=eve",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: eve",
             "name": "eve",
             "parent": "fleet=mic92"
@@ -10549,7 +10549,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=evo",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: evo",
             "name": "evo",
             "parent": "fleet=mic92"
@@ -10561,7 +10561,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=installer",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: installer",
             "name": "installer",
             "parent": "fleet=mic92"
@@ -10573,7 +10573,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=jacquardmachine",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: jacquardmachine",
             "name": "jacquardmachine",
             "parent": "fleet=mic92"
@@ -10585,7 +10585,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=matchbox",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: matchbox",
             "name": "matchbox",
             "parent": "fleet=mic92"
@@ -10597,7 +10597,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=turingmachine",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: turingmachine",
             "name": "turingmachine",
             "parent": "fleet=mic92"
@@ -10609,7 +10609,7 @@
                 "machine"
             ],
             "id": "fleet=mic92,machine=utm-vm",
-            "kind": "machine",
+            "kind": "host",
             "label": "machine: utm-vm",
             "name": "utm-vm",
             "parent": "fleet=mic92"

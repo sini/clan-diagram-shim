@@ -248,9 +248,9 @@ let
                 fullLabel = m.label;
                 shape = if m.input == "self" then "hexagon" else "trapezoid";
                 style = if m.input == "self" then "default" else "adapter";
-                entityKind = "machine";
-                entityInstance = "machine:${hostName}";
-                scope = "machine:${hostName}";
+                entityKind = "host";
+                entityInstance = "host:${hostName}";
+                scope = machineScopeMap.${hostName}.scopeId;
                 originalId = m.label;
                 pathKey = m.label;
                 host = hostName;
@@ -305,8 +305,8 @@ let
       fullLabel = "machine: ${ms.name}";
       isScope = true;
       shape = "rect";
-      entityKind = "machine";
-      entityInstance = "machine:${ms.name}";
+      entityKind = "host";
+      entityInstance = "host:${ms.name}";
       scope = ms.scopeId;
       originalId = ms.scopeId;
       pathKey = ms.scopeId;
@@ -327,9 +327,9 @@ let
         label = instanceName;
         fullLabel = "service: ${instanceName}";
         shape = "hexagon";
-        entityKind = "machine";
-        entityInstance = "machine:${machineName}";
-        scope = "machine:${machineName}";
+        entityKind = "host";
+        entityInstance = "host:${machineName}";
+        scope = machineScopeMap.${machineName}.scopeId;
         originalId = instanceName;
         pathKey = instanceName;
         host = machineName;
@@ -455,7 +455,7 @@ let
   machineScopeEntries = map (ms: {
     id = ms.scopeId;
     name = ms.name;
-    kind = "machine";
+    kind = "host";
     label = "machine: ${ms.name}";
     parent = rootScopeId;
     children = [ ];
@@ -474,7 +474,7 @@ let
 
   machineEntityInstances = map (ms: {
     id = ms.nodeId;
-    kind = "machine";
+    kind = "host";
     name = ms.name;
     label = "machine: ${ms.name}";
     parent = rootNodeId;
